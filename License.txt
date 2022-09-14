@@ -1,0 +1,22 @@
+This software and all of its code and affects are the sole property of Isaiah Curtis Bowers, henceforth known as "The Developer."
+
+This software, known as the "RCM Information Suite" is not intended for commercial use and may not be used for
+commercial purposes without express written consent.
+
+This software may not be changed, manipulated, or modified, other than through normal use in the Graphical User Interface.  The purpose of this
+is so that the user can test out the intended functions of the software.
+
+Neither this software, nor any portion of this software, may be copied for any purposes other than as necessary to consider
+employment of the developer.
+
+The developer has the complete, total, and unfettered right to revoke use of this software at any time, for any reason or for no reason.
+If the right of use is revoked, the licensee will be required to immediately destroy all copies of this software.
+
+The licensee accepts full liability for the use of this product and releases the developer from any and all liability relating
+to this software and its use.
+
+Any rights not explicitly stated by the developer in writing as having been given up by the developer are reserved by the developer.
+
+By using this software you are agreeing to all terms in this license.
+
+If you believe this software is being misused, please contact bowersisaiah1420@gmail.com

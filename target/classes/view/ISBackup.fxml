@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="637.0" prefWidth="970.0" styleClass="pane" stylesheets="@../../../../../src/stylesheets/TabBar.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="967.0" styleClass="pane">
+         <top>
+            <VBox prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="title_hbox">
+                     <children>
+                        <Line endX="100.0" startX="-100.0" />
+                        <Label contentDisplay="RIGHT" text="Information Search">
+                           <font>
+                              <Font name="Kristen ITC" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" styleClass="logoImage" />
+                           </graphic>
+                        </Label>
+                        <Line endX="100.0" layoutX="415.0" layoutY="27.0" startX="-100.0" />
+                     </children>
+                  </HBox>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="clientLabel" text="CLIENT:">
+                                 <HBox.margin>
+                                    <Insets left="35.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="clientCombo" onAction="#clientComboSelection" prefWidth="150.0" promptText="Name of Client">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <right>
+                        <Label fx:id="tipOfTheDayLabel" alignment="CENTER" prefHeight="71.0" prefWidth="151.0" text="Tip of the Day!" wrapText="true" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="3.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </right>
+                     <VBox.margin>
+                        <Insets left="45.0" right="45.0" />
+                     </VBox.margin>
+                     <left>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="126.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#adminButtonClick" text="Admin">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#settingsButtonClick" text="Settings">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="3.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </left>
+                  </BorderPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <TabPane prefHeight="521.0" prefWidth="954.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Remark Code">
+                     <content>
+                        <BorderPane prefHeight="541.0" prefWidth="967.0">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="435.0" prefWidth="847.0" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <TableView fx:id="resultsTableView" onMouseClicked="#remarkResultTableClick" prefHeight="200.0" prefWidth="583.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="resultsTotalColumn" prefWidth="38.66665971279144" text="T" />
+                                                <TableColumn fx:id="resultsNumberColumn" prefWidth="38.66665971279144" text="#" />
+                                                <TableColumn fx:id="resultsCodeColumn" prefWidth="53.333309173583984" text="Code" />
+                                                <TableColumn fx:id="resultsDescriptionColumn" prefWidth="448.66668701171875" text="Description" />
+                                                <TableColumn fx:id="resultsPrefixColumn" minWidth="0.0" prefWidth="25.33331298828125" text="Prefix" />
+                                                <TableColumn fx:id="resultsSuffixColumn" minWidth="0.0" prefWidth="0.0" text="Suffix" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="180.0" prefWidth="214.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#resultsPRCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="PR Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsCOCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="CO Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsOACopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="OA Copy" />
+                                                   </children>
+                                                </VBox>
+                                                <TextArea fx:id="remarkResultsDescriptionTextArea" editable="false" prefHeight="180.0" prefWidth="130.0" promptText="Select a Remark Code From the Table and its Description Will Appear Here" wrapText="true" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="7.0" right="7.0" />
+                                             </padding>
+                                          </HBox>
+                                       </left>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+                                             <center>
+                                                <Label text="Results" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#previousResultButtonClick" text="Previous" />
+                                                      <Button layoutX="169.0" layoutY="15.0" mnemonicParsing="false" onAction="#nextResultButtonClick" text="Next" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                    <BorderPane layoutX="10.0" layoutY="27.0" prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <TableView prefHeight="171.0" prefWidth="511.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="mcuTotalColumn" prefWidth="38.00000321865082" text="T" />
+                                                <TableColumn fx:id="mcuNumberColumn" prefWidth="38.00000321865082" text="#" />
+                                                <TableColumn fx:id="mcuCodeColumn" prefWidth="57.999996185302734" text="Code" />
+                                                <TableColumn fx:id="mcuDescriptionColumn" prefWidth="442.66680908203125" text="Description" />
+                                                <TableColumn fx:id="resultsPrefixColumn1" minWidth="0.0" prefWidth="23.99993896484375" text="Prefix" />
+                                                <TableColumn fx:id="resultsSuffixColumn1" minWidth="5.33331298828125" prefWidth="5.33331298828125" text="Suffix" />
+                                             </columns>
+                                             <BorderPane.margin>
+                                                <Insets />
+                                             </BorderPane.margin>
+                                          </TableView>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="180.0" prefWidth="214.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#resultsPRCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="PR Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsCOCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="CO Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsOACopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="OA Copy" />
+                                                   </children>
+                                                </VBox>
+                                                <TextArea fx:id="remarkMCUDescriptionTextArea" editable="false" prefHeight="180.0" prefWidth="130.0" promptText="Select a Remark Code From the Table and its Description Will Appear Here" wrapText="true" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="7.0" right="7.0" />
+                                             </padding>
+                                          </HBox>
+                                       </left>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#previousMCUButtonClick" text="Previous" />
+                                                      <Button layoutX="169.0" layoutY="15.0" mnemonicParsing="false" onAction="#nextMCUButtonClick" text="Next" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                             <center>
+                                                <Label text="Most Commonly Used With Your Selection" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="25.0" right="25.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="69.0" prefWidth="967.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="remarkSearchTextField" layoutX="25.0" layoutY="6.0" onAction="#remarkSearchTextFieldAction" prefHeight="25.0" prefWidth="211.0" promptText="Search by Phrase or Code" />
+                                    <HBox alignment="CENTER" layoutX="19.0" layoutY="40.0" prefHeight="24.0" prefWidth="524.0" spacing="47.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Filter By:" />
+                                          <RadioButton fx:id="carcRARCRadioButton" layoutX="323.0" layoutY="21.0" mnemonicParsing="false" onAction="#carcRARCRadioButtonSelection" text="CARCS and RARCS">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="FilterByRow" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="justCARCsRadioButton" mnemonicParsing="false" onAction="#justCARCsRadioButtonSelection" text="Just CARCS" toggleGroup="$FilterByRow" />
+                                          <RadioButton fx:id="justRARCSRadioButton" mnemonicParsing="false" onAction="#justRARCSRadioButtonSelection" text="Just RARCS" toggleGroup="$FilterByRow" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="19.0" layoutY="64.0" prefHeight="24.0" prefWidth="625.0" spacing="89.0" styleClass="sort_by_hbox" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Sort By:" />
+                                          <RadioButton fx:id="mostCommonRadioButton" mnemonicParsing="false" onAction="#mostCommonRadioButtonSelection" text="Most Commonly Used">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="SortByRow" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="alphanumericRadioButton" layoutX="323.0" layoutY="21.0" mnemonicParsing="false" onAction="#alphanumericRadioButtonSelection" text="Alphanumerically" toggleGroup="$SortByRow" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="377.0" layoutY="5.0" prefHeight="28.0" prefWidth="289.0" spacing="15.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <CheckBox fx:id="includeAlertsCheckBox" alignment="CENTER" mnemonicParsing="false" onAction="#includeAlertsCheckBoxSelection" prefHeight="17.0" prefWidth="102.0" text="Include Alerts">
+                                             <HBox.margin>
+                                                <Insets right="56.0" />
+                                             </HBox.margin>
+                                          </CheckBox>
+                                          <Button mnemonicParsing="false" onAction="#suggestionButtonClick" prefHeight="25.0" prefWidth="102.0" text="Suggestions" />
+                                       </children>
+                                    </HBox>
+                                    <Button layoutX="244.0" layoutY="6.0" mnemonicParsing="false" onAction="#remarkClearButtonClick" text="Clear" />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </top>
+                           <right>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clearAllCodesButtonClick" prefHeight="25.0" prefWidth="89.0" text="Clear All" />
+                                    <Button mnemonicParsing="false" onAction="#clearLastCodeButtonClick" prefHeight="25.0" prefWidth="90.0" text="Clear Last" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Codes:">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button mnemonicParsing="false" onAction="#codesCopyButtonClick" text="Copy">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="codesListView" prefHeight="85.0" prefWidth="100.0">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </ListView>
+                                    <HBox prefHeight="31.0" prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#resultsPRAddButtonClick" prefHeight="25.0" prefWidth="63.0" text="PR Add">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#mcuPRAddButtonClick" text="2">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="175.0" prefHeight="33.0" prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#resultsCOAddButtonClick" prefHeight="25.0" prefWidth="63.0" text="CO Add">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#mcuCOAddButtonClick" text="2">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="239.0" prefHeight="55.0" prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#ResultsOAAddButtonClick" prefHeight="25.0" prefWidth="64.0" text="OA Add">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#mcuOAAddButtonClick" text="2">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Notes:" />
+                                    <TextArea fx:id="notesTextArea" editable="false" prefHeight="180.0" prefWidth="89.0" style="-fx-text-fill: red;" wrapText="true">
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                 </children>
+                                 <padding>
+                                    <Insets top="15.0" />
+                                 </padding>
+                                 <BorderPane.margin>
+                                    <Insets right="20.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Payer">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="560.0" prefWidth="647.0" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <BorderPane prefHeight="230.0" prefWidth="917.0">
+                                       <center>
+                                          <TableView fx:id="payerClientTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="payerClientDocNameColumn" prefWidth="295.9999688863754" text="Name on Document" />
+                                                <TableColumn fx:id="payerClientEnterNameColumn" prefWidth="300.0" text="Name to Enter" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="917.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#clientPayerCopyNameButtonClick" text="Copy Name to Enter" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                             <center>
+                                                <Label fx:id="payerClientNameLabel" text="Name of Client" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                    <BorderPane layoutX="10.0" layoutY="27.0" prefHeight="230.0" prefWidth="200.0">
+                                       <center>
+                                          <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="payerAllDocNameColumn" prefWidth="295.9999688863754" text="Name on Document" />
+                                                <TableColumn fx:id="payerAllEnterNameColumn" prefWidth="300.0" text="Name to Enter" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#allPayerCopyNameButtonClick" text="Copy Name to Enter" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                             <center>
+                                                <Label text="All Clients" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="25.0" right="25.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="38.0" prefWidth="661.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="payerSearchTextField" layoutX="25.0" layoutY="6.0" onAction="#payerSearchTextFieldAction" prefHeight="25.0" prefWidth="211.0" promptText="Search by Name on Document" />
+                                    <HBox layoutX="377.0" layoutY="6.0" prefHeight="25.0" prefWidth="257.0" spacing="15.0" AnchorPane.rightAnchor="27.000000000000057">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#suggestionButtonClick" prefHeight="25.0" prefWidth="87.0" text="Suggestions" />
+                                          <Button mnemonicParsing="false" onAction="#suggestPayerComboButtonClick" prefHeight="10.0" prefWidth="154.0" text="Suggest a Payer Combo" />
+                                       </children>
+                                    </HBox>
+                                    <Button layoutX="244.0" layoutY="6.0" mnemonicParsing="false" onAction="#payerClearButtonClick" text="Clear" />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </top>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Provider">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="531.0" prefWidth="647.0" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <BorderPane prefHeight="230.0" prefWidth="200.0">
+                                       <center>
+                                          <TableView fx:id="providerClientTableView" prefHeight="200.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="providerClientDeptColumn" prefWidth="156.00004136562347" text="Department" />
+                                                <TableColumn fx:id="providerClientFirstNameColumn" prefWidth="186.00001525878906" text="First Name" />
+                                                <TableColumn fx:id="providerClientLastNameColumn" prefWidth="188.66665649414062" text="Last Name" />
+                                                <TableColumn fx:id="providerClientNPIColumn" prefWidth="160.6666259765625" text="NPI" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="917.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#clientProviderCopyNPIButtonClick" text="Copy NPI" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                             <center>
+                                                <Label fx:id="providerClientNameLabel" text="Name of Client" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                    <BorderPane layoutX="10.0" layoutY="27.0" prefHeight="230.0" prefWidth="200.0">
+                                       <center>
+                                          <TableView prefHeight="200.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="providerAllDeptColumn" prefWidth="156.00004136562347" text="Department" />
+                                                <TableColumn fx:id="providerAllFirstNameColumn" prefWidth="186.00001525878906" text="First Name" />
+                                                <TableColumn fx:id="providerAllLastNameColumn" prefWidth="188.66665649414062" text="Last Name" />
+                                                <TableColumn fx:id="providerAllNPIColumn" prefWidth="160.6666259765625" text="NPI" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <BorderPane prefHeight="35.0" prefWidth="917.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#allProviderCopyNPIButtonClick" text="Copy NPI" />
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                             <center>
+                                                <Label text="All Clients" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Freestyle Script" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </center>
+                                          </BorderPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="25.0" right="25.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                           <top>
+                              <AnchorPane prefHeight="38.0" prefWidth="661.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="providerSearchTextField" layoutX="25.0" layoutY="6.0" onAction="#providerSearchTextFieldAction" prefHeight="25.0" prefWidth="211.0" promptText="Search by Name, NPI, or Department" />
+                                    <Button layoutX="244.0" layoutY="6.0" mnemonicParsing="false" onAction="#providerClearButtonClick" text="Clear" />
+                                    <HBox alignment="CENTER" layoutX="331.0" layoutY="4.0" prefHeight="29.0" prefWidth="345.0" spacing="15.0" AnchorPane.rightAnchor="27.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#suggestionButtonClick" prefHeight="25.0" prefWidth="95.0" text="Suggestions" />
+                                          <Button mnemonicParsing="false" onAction="#deptIDButtonClick" prefHeight="25.0" prefWidth="120.0" text="Department Notes" />
+                                          <Button mnemonicParsing="false" onAction="#distinctCodesButtonClick" text="Specialty Notes" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </top>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

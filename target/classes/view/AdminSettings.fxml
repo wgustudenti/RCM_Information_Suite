@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="228.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="569.0" styleClass="title_hbox" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="100.0" startX="-47.169071197509766" startY="5.735953527619131E-5" />
+                  <Label contentDisplay="RIGHT" text="Admin Settings">
+                     <font>
+                        <Font name="Kristen ITC" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" styleClass="logoImage" />
+                     </graphic>
+                  </Label>
+                  <Line endX="100.0" startX="-47.169071197509766" startY="5.735953527619131E-5" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="375.0" prefWidth="597.0">
+                     <children>
+                        <VBox prefHeight="148.0" prefWidth="197.0" spacing="21.0">
+                           <children>
+                              <Label text="Choose a Database" />
+                              <Label text="Color Scheme" />
+                              <Label text="Table Font Size" />
+                              <Label text="Table Font Style" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" right="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="148.0" prefWidth="465.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="464.0" spacing="15.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addDatabaseButtonClick" text="Add" />
+                                    <Button mnemonicParsing="false" onAction="#editDatabaseButtonClick" text="Edit" />
+                                    <Button mnemonicParsing="false" onAction="#removeDatabaseButtonClick" text="Remove" />
+                                    <ComboBox fx:id="databaseCombo" onAction="#databaseComboSelection" prefHeight="25.0" prefWidth="211.0" promptText="Database" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="353.0" spacing="15.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addColorSchemeButtonClick" text="Add" />
+                                    <Button mnemonicParsing="false" onAction="#removeColorSchemeButtonClick" text="Remove" />
+                                    <ComboBox fx:id="colorSchemeCombo" onAction="#colorSchemeComboSelection" prefHeight="25.0" prefWidth="169.0" promptText="Color Scheme" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="353.0">
+                                 <children>
+                                    <ComboBox fx:id="fontSizeCombo" onAction="#fontSizeComboSelection" prefHeight="25.0" prefWidth="169.0" promptText="Font Size" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="353.0">
+                                 <children>
+                                    <ComboBox fx:id="fontStyleCombo" onAction="#fontStyleComboSelection" prefHeight="25.0" prefWidth="169.0" promptText="Font Style" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="45.0" prefWidth="597.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="36.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButtonClick" text="Back" AnchorPane.leftAnchor="30.0" />
+                  <Button layoutX="416.0" layoutY="10.0" mnemonicParsing="false" onAction="#addTipButtonClick" text="Add Tip of The Day" AnchorPane.rightAnchor="30.0" />
+                  <Button layoutX="332.0" layoutY="10.0" mnemonicParsing="false" text="Change Password" AnchorPane.rightAnchor="155.33333333333337" />
+               </children>
+            </AnchorPane>
+         </bottom></BorderPane>
+   </content>
+</ScrollPane>

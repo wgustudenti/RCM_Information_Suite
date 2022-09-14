@@ -1,0 +1,119 @@
+/*Changes the general background color*/
+.root {
+    -fx-background-color: #e6f3ff;
+}
+
+/*Changes the background color of any node with this styleclass - must be assigned manually
+ - currently assigned as background to borderpanes.*/
+.pane {
+    /*really cool-fx-background-color: radial-gradient(center 50% 50%, radius 50%, #6600cc, #6600ff, #664db3, #4d4db3);
+*/
+    -fx-background-color: linear-gradient(to bottom right, #e6f3ff, #4d94ff, #ffdb82, #fdf8e8);
+}
+
+/*Changes the background color of any node with this styleclass - must be assigned manually
+ - currently assigned to the "Sort By" hbox on the "Information Search" window.*/
+.sort_by_hbox {
+    -fx-background-color: linear-gradient(#80c1ff, #4da9ff, #0084ff);
+}
+
+/*Changes the background color of any node with this styleclass - must be assigned manually
+ - currently assigned to all of the hboxs at the tops of each window.*/
+.title_hbox {
+    /*-fx-background-color: #75abbd;*/
+    /*-fx-opacity: 0.5*/
+}
+
+/*Changes how the tab header background looks*/
+.tab-header-background {
+    /**-fx-background-color: #75abbd;*/
+    /**-fx-background-color: linear-gradient(to bottom right, #e6f3ff, #4d94ff, #ffdb82, #ffe8ae);*/
+    /**-fx-background-color: transparent;*/
+    -fx-opacity: 0.2
+}
+
+.combo-box {
+    -fx-background-color: linear-gradient(#d9d9d9, #bfbfbf, #8c8c8c);
+    -fx-border-color: #808080;
+    -fx-border-radius: 3 3 3 3;
+}
+
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#b3b3b3, #999999, #737373);
+    -fx-border-color: #cccccc;
+}
+
+/*.text-area   {
+    -fx-text-fill: red;
+}*/
+
+/*Changes the tab-pane background color*/
+.tab-pane .tab
+{
+    /*-fx-background-image: url='@..//..//..//..//..//src//images//OIP.jfif';/*/
+    /*-fx-background-color: #abe0ff;*/
+    /*-fx-background-color: #3333cc;*/
+    /*-fx-background-color: #4040bf;*/
+    -fx-background-color: linear-gradient(#4d4db3, #3d3d8f, #262659);
+    -fx-background-radius: 4 6 1 1;
+    -fx-border-radius: 4 6 1 1;
+    /*-fx-border-color: grey;
+    -fx-border-radius: 30;*/
+}
+
+/*Changes the text color of the tab label (top of the tab pane, to choose tab)*/
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #ffdb4d
+}
+
+
+.tab-pane .tab:hover {
+    -fx-background-color: linear-gradient(#3d3d8f, #2e2e6b, #171736);
+}
+
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+}
+
+.table-view .column-header {
+    -fx-border-color: #74ce64;
+    -fx-border-radius: 3;
+}
+
+/*Changes how the tableview column headers look*/
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: linear-gradient(#c4eabd, #a8e09e, #62c851);
+}
+
+/*Changes how the buttons look*/
+.button{
+    -fx-background-color: linear-gradient(#e2e2cf, #cfcfaf, #b3b380);
+    -fx-border-color: /*#004d26;*/#8f8f56;
+    -fx-border-width: 0.6;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+/*Changes how the button looks during hover*/
+.button:hover{
+    -fx-background-color: linear-gradient(#c6c69f, #b3b380, #80804d);
+    -fx-border-color: #777722;
+    /*-fx-background-image: url=@JavaProjects\RemarkPrime\src\images\another.jfif;*/
+}
+
+/*Sets the image located at the tops of all GUI scenes*/
+.logoImage{
+    -fx-image: url(iStock-484031925.jpg)
+}
+
+/*#75abbd - dark torquiouse
+*#abe0ff - light blue
+*#6c34f1 - purple
+*#9efafa - lighter blue
+*#c4eabd - light green
+*/

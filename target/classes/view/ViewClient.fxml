@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="400.0" prefWidth="600.0" styleClass="pane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewClientController">
+   <content>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" styleClass="pane">
+         <top>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="600.0" styleClass="title_hbox" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="22.959558486938477" endY="-0.909290075302124" layoutX="415.0" layoutY="27.0" startX="-158.32867431640625" startY="-0.24261824786663055" />
+                  <Label contentDisplay="RIGHT" text="View Clients">
+                     <font>
+                        <Font name="Kristen ITC" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" styleClass="logoImage" />
+                     </graphic>
+                  </Label>
+                  <Line endX="22.959558486938477" endY="-0.909290075302124" startX="-158.32867431640625" startY="-0.24261824786663055" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <ListView fx:id="clientListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="2.0" left="7.0" right="7.0" top="2.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ListView>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="40.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButtonClick" text="Back" AnchorPane.leftAnchor="30.0" />
+                  <HBox alignment="CENTER_RIGHT" layoutX="423.0" layoutY="8.0" prefHeight="25.0" prefWidth="163.0" spacing="7.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addButtonClick" prefHeight="25.0" prefWidth="43.0" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#editButtonClick" prefHeight="25.0" prefWidth="45.0" text="Edit" />
+                        <Button mnemonicParsing="false" onAction="#removeButtonClick" text="Remove" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>
