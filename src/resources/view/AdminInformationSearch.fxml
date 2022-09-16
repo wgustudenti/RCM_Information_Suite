@@ -129,13 +129,13 @@
                                        <left>
                                           <HBox prefHeight="180.0" prefWidth="214.0" spacing="7.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0">
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0">
                                                    <children>
-                                                      <Button mnemonicParsing="false" onAction="#resultsCOCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="CO Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#resultsOACopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="OA Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#resultsPRCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="PR Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#resultsEditRemarkButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                      <Button mnemonicParsing="false" onAction="#resultsRemoveRemarkButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsCOCopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="CO Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsOACopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="OA Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsPRCopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="PR Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsEditRemarkButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                      <Button mnemonicParsing="false" onAction="#resultsRemoveRemarkButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                                    </children>
                                                 </VBox>
                                                 <TextArea fx:id="remarkResultsDescriptionTextArea" editable="false" prefHeight="180.0" prefWidth="130.0" promptText="Select a Remark Code From the Table and its Description Will Appear Here" wrapText="true" />
@@ -188,13 +188,13 @@
                                        <left>
                                           <HBox prefHeight="180.0" prefWidth="214.0" spacing="7.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0">
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0">
                                                    <children>
-                                                      <Button mnemonicParsing="false" onAction="#mcuCOCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="CO Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#mcuOACopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="OA Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#mcuPRCopyButtonClick" prefHeight="25.0" prefWidth="65.0" text="PR Copy" />
-                                                      <Button mnemonicParsing="false" onAction="#mcuEditRemarkButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                      <Button mnemonicParsing="false" onAction="#mcuRemoveRemarkButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                      <Button mnemonicParsing="false" onAction="#mcuCOCopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="CO Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#mcuOACopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="OA Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#mcuPRCopyButtonClick" prefHeight="25.0" prefWidth="70.0" text="PR Copy" />
+                                                      <Button mnemonicParsing="false" onAction="#mcuEditRemarkButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                      <Button mnemonicParsing="false" onAction="#mcuRemoveRemarkButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                                    </children>
                                                 </VBox>
                                                 <TextArea fx:id="remarkMCUDescriptionTextArea" editable="false" prefHeight="180.0" prefWidth="130.0" promptText="Select a Remark Code From the Table and its Description Will Appear Here" wrapText="true" />
@@ -414,10 +414,10 @@
                                           </BorderPane>
                                        </top>
                                        <left>
-                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" onAction="#editClientPayerButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeClientPayerButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                <Button mnemonicParsing="false" onAction="#editClientPayerButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeClientPayerButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                              </children>
                                           </VBox>
                                        </left>
@@ -456,10 +456,10 @@
                                           </BorderPane>
                                        </top>
                                        <left>
-                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" onAction="#editAllPayerButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeAllPayerButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                <Button mnemonicParsing="false" onAction="#editAllPayerButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeAllPayerButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                              </children>
                                           </VBox>
                                        </left>
@@ -532,10 +532,10 @@
                                           </BorderPane>
                                        </top>
                                        <left>
-                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" onAction="#editClientProviderButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeClientProviderButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                <Button mnemonicParsing="false" onAction="#editClientProviderButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeClientProviderButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                              </children>
                                           </VBox>
                                        </left>
@@ -576,10 +576,10 @@
                                           </BorderPane>
                                        </top>
                                        <left>
-                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="75.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="80.0" spacing="5.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" onAction="#editAllProviderButtonClick" prefHeight="25.0" prefWidth="65.0" text="Edit" />
-                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeAllProviderButtonClick" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+                                                <Button mnemonicParsing="false" onAction="#editAllProviderButtonClick" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+                                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeAllProviderButtonClick" prefHeight="25.0" prefWidth="70.0" text="Remove" />
                                              </children>
                                           </VBox>
                                        </left>
